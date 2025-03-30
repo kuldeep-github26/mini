@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 350px;
+            text-align: center;
+        }
+        
+        h2 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 25px;
+            background: #f0f0f0;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .container p {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .container p a {
+            color: #9b59b6;
+            text-decoration: none;
+        }
+
+        #createAccountForm {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="loginFormContainer">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="#" id="signUpLink">Sign up here</a></p>
+</div>
+
+<!-- Create Account Form -->
+<div class="container" id="createAccountForm">
+    <h2>Create Account</h2>
+    <form id="signUpForm">
+        <input type="text" id="newUsername" name="newUsername" placeholder="Username" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="newPassword" name="newPassword" placeholder="Password" required>
+        <input type="submit" value="Create Account">
+    </form>
+    <p>Already have an account? <a href="#" id="loginLink">Login here</a></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
